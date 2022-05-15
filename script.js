@@ -28,11 +28,7 @@ startGameBtn.addEventListener('click', event => {
 
 const changePlayerTurn = () => {
   players.forEach(player => {
-    if (player.classList.contains('player--active')) {
-      player.classList.remove('player--active');
-    } else {
-      player.classList.add('player--active');
-    }
+    player.classList.toggle('player--active');
   });
 
   activePlayer = document.querySelector('.player--active');
