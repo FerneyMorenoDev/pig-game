@@ -1,18 +1,20 @@
 'use strict';
-const rollDiceBtn = document.querySelector('.btn--roll');
-const holdBtn = document.querySelector('.btn--hold');
-const newGameBtn = document.querySelector('.btn--new');
-const startGameBtn = document.querySelector('.btn--start-game');
-const dice = document.querySelector('.dice');
-const players = document.querySelectorAll('.player');
-const playersNameContainer = document.querySelector('.add-players-name');
-const playersName1 = document.querySelector('.player-1-name');
-const playersName2 = document.querySelector('.player-2-name');
-const player1 = document.getElementById('name--0');
-const player2 = document.getElementById('name--1');
-let activePlayer = document.querySelector('.player--active');
-let currentPlayerScore = activePlayer.querySelector('.current-score');
-let scoreActivePlayer = activePlayer.querySelector('.score');
+import {
+  rollDiceBtn,
+  holdBtn,
+  newGameBtn,
+  startGameBtn,
+  dice,
+  players,
+  playersNameContainer,
+  playersName1,
+  playersName2,
+  player1,
+  player2,
+  activePlayer,
+  currentPlayerScore,
+  scoreActivePlayer,
+} from './variables.js';
 
 let accScore = 0;
 const PLAYER_ONE = 'player 1';

@@ -1,0 +1,14 @@
+export const rollDiceBtn = document.querySelector('.btn--roll');
+export const holdBtn = document.querySelector('.btn--hold');
+export const newGameBtn = document.querySelector('.btn--new');
+export const startGameBtn = document.querySelector('.btn--start-game');
+export const dice = document.querySelector('.dice');
+export const players = document.querySelectorAll('.player');
+export const playersNameContainer = document.querySelector('.add-players-name');
+export const playersName1 = document.querySelector('.player-1-name');
+export const playersName2 = document.querySelector('.player-2-name');
+export const player1 = document.getElementById('name--0');
+export const player2 = document.getElementById('name--1');
+export let activePlayer = document.querySelector('.player--active');
+export let currentPlayerScore = activePlayer.querySelector('.current-score');
+export let scoreActivePlayer = activePlayer.querySelector('.score');
