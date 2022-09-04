@@ -68,8 +68,7 @@ newGameBtn.addEventListener('click', () => {
   rollDiceBtn.disabled = false;
   holdBtn.disabled = false;
   players.forEach(player => {
-    player.classList.remove('player--winner');
-    player.classList.remove('player--active');
+    player.classList.remove('player--winner', 'player--active');
     player.querySelector('.score').textContent = 0;
     player.querySelector('.current-score').textContent = 0;
   });
