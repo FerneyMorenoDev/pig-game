@@ -1,5 +1,4 @@
 'use strict';
-let activePlayer = document.querySelector('.player--active');
 const rollDiceBtn = document.querySelector('.btn--roll');
 const holdBtn = document.querySelector('.btn--hold');
 const newGameBtn = document.querySelector('.btn--new');
@@ -11,19 +10,20 @@ const playersName1 = document.querySelector('.player-1-name');
 const playersName2 = document.querySelector('.player-2-name');
 const player1 = document.getElementById('name--0');
 const player2 = document.getElementById('name--1');
+let activePlayer = document.querySelector('.player--active');
 let currentPlayerScore = activePlayer.querySelector('.current-score');
 let scoreActivePlayer = activePlayer.querySelector('.score');
 
 let accScore = 0;
+const PLAYER_ONE = 'player 1';
+const PLAYER_TWO = 'player 2';
 
 startGameBtn.addEventListener('click', event => {
   event.preventDefault();
-  const playerName1 = playersName1.value;
-  const playerName2 = playersName2.value;
   playersNameContainer.classList.add('hidden');
 
-  player1.textContent = playerName1 ? playerName1 : 'player 1';
-  player2.textContent = playerName2 ? playerName2 : 'player 2';
+  player1.textContent = playersName1.value || PLAYER_ONE;
+  player2.textContent = playersName2.value || PLAYER_TWO;
 });
 
 const changePlayerTurn = () => {
@@ -73,5 +73,7 @@ newGameBtn.addEventListener('click', () => {
     player.querySelector('.score').textContent = 0;
     player.querySelector('.current-score').textContent = 0;
   });
+  playersName1.value = '';
+  playersName2.value = '';
   document.querySelector('.player--0').classList.add('player--active');
 });
